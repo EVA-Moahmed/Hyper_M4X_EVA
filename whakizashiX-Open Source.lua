@@ -95,9 +95,6 @@ WhakizashiX 1.0.0.1
     TitleSize = 80,
 })
 
-WhakizashiXTab:Select()
-
-
 local Players = game:GetService("Players")
 local RunService = game:GetService("RunService")
 local LocalPlayer = Players.LocalPlayer
