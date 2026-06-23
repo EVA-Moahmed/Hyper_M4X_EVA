@@ -68,13 +68,18 @@ local Keybind = Tabs.Customise:Section({ Title = "Keybind", Side = "Left" })
 print("✅ Tabs and Sections defined correctly!")
 
 -- Seção About
+
+
+WhakizashiXTab:Select() -- Select Tab
+
 WhakizashiXTab:Paragraph({    
-        Title = "About Neo Hyper",    
-        Desc = "Made By : M4X EVA,  Special thanks: Amal Jana " ,
-        Thumbnail = "rbxassetid://125307920527809",
-        ThumbnailSize = 60,
+    Title = "About Neo Hyper",    
+    Desc = "Made By : M4X EVA,  Special thanks: Amal Jana ",
+    Thumbnail = "rbxassetid://125307920527809",
+    ThumbnailSize = 60,
 })
-ChangeLogsSection:Paragraph({
+
+WhakizashiXTab:Paragraph({
     Title = [[
     Change Logs
 WhakizashiX 1.0.0.1
@@ -87,10 +92,6 @@ WhakizashiX 1.0.0.1
 ]],
     TitleSize = 80,
 })
-
-WhakizashiXTab:Select() -- Select Tab
-
-
 
 
 local Players = game:GetService("Players")
