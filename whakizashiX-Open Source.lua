@@ -77,12 +77,9 @@ Window:Tag({
 
 local WhakizashiXTab = Tabs.Imp:Section({ Title = "Neo Hyper", Side = "Left" })
 local MainTab = Tabs.Main:Section({ Title = "Player", Side = "Left" })
-local VisualsTab = Tabs.Main:Section({ Title = "Esp", Side = "Left" })
-local AutoFarmTab = Tabs.Main:Section({ Title = "AutoFarm", Side = "Left" })
 local VisualTab = Tabs.Main:Section({ Title = "Visual", Side = "Left" })
 local GameTab = Tabs.Customise:Section({ Title = "Game Settings", Side = "Left" })
-local WindowTab = Tabs.Customise:Section({ Title = "WhakizashiX settings", Side = "Left" })
-local Keybind = Tabs.Customise:Section({ Title = "Keybind", Side = "Left" })
+local WindowTab = Tabs.Customise:Section({ Title = "settings", Side = "Left" })
 
 -- Seção About
 WhakizashiXTab:Paragraph({    
