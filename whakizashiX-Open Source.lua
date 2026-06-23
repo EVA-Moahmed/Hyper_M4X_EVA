@@ -68,10 +68,6 @@ local Keybind = Tabs.Customise:Section({ Title = "Keybind", Side = "Left" })
 print("✅ Tabs and Sections defined correctly!")
 
 -- Seção About
-
-
-WhakizashiXTab:Select() -- Select Tab
-
 WhakizashiXTab:Paragraph({    
     Title = "About Neo Hyper",    
     Desc = "Made By : M4X EVA,  Special thanks: Amal Jana ",
@@ -93,6 +89,7 @@ WhakizashiX 1.0.0.1
     TitleSize = 80,
 })
 
+WhakizashiXTab:Select() -- Select Tab
 
 local Players = game:GetService("Players")
 local RunService = game:GetService("RunService")
