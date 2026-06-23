@@ -40,7 +40,7 @@ Window:EditOpenButton({
 local Tabs = {}
 
 Tabs.Imp = Window:Tab({
-    Title = "Faq",
+    Title = "inof",
     Icon = "circle-question-mark",
     Locked = false,
 })
