@@ -40,22 +40,35 @@ Enabled = true,
 Draggable = true,
 })
 
--- تعريف التابات بشكل صحيح
 local Tabs = {}
 
--- تعريف التابات (Tabs مش Sections)
-Tabs.Imp = Window:Tab({ Title = "Faq", Icon = "circle-question-mark", Locked = false })
-Tabs.Main = Window:Tab({ Title = "Main", Icon = "flame", Locked = false })
-Tabs.Customise = Window:Tab({ Title = "Misc", Icon = "bolt", Locked = false })
+
+Tabs.Imp = Window:Section({
+    Title = "Faq",
+    Icon = "circle-question-mark",
+    Opened = true,
+})
+
+
+Tabs.Main = Window:Section({
+    Title = "Main",
+    Icon = "flame",
+    Opened = true,
+})
+
+Tabs.Customise = Window:Section({
+    Title = "Misc",
+    Icon = "bolt",
+    Opened = false,
+}) 
 
 Window:Tag({
     Title = "Beta",
     Icon = "bird",
     Color = Color3.fromHex("#B2B2B2"),
-    Radius = 13,
+    Radius = 13, -- from 0 to 13
 })
 
--- تعريف الأقسام (Sections) داخل التابات
 local WhakizashiXTab = Tabs.Imp:Section({ Title = "Neo Hyper", Side = "Left" })
 local MainTab = Tabs.Main:Section({ Title = "Player", Side = "Left" })
 local VisualsTab = Tabs.Main:Section({ Title = "Esp", Side = "Left" })
@@ -65,17 +78,14 @@ local GameTab = Tabs.Customise:Section({ Title = "Game Settings", Side = "Left" 
 local WindowTab = Tabs.Customise:Section({ Title = "WhakizashiX settings", Side = "Left" })
 local Keybind = Tabs.Customise:Section({ Title = "Keybind", Side = "Left" })
 
-print("✅ Tabs and Sections defined correctly!")
-
 -- Seção About
 WhakizashiXTab:Paragraph({    
-    Title = "About Neo Hyper",    
-    Desc = "Made By : M4X EVA,  Special thanks: Amal Jana ",
-    Thumbnail = "rbxassetid://125307920527809",
-    ThumbnailSize = 60,
+        Title = "About Neo Hyper",    
+        Desc = "Made By : M4X EVA,  Special thanks: Amal Jana " ,
+        Thumbnail = "rbxassetid://125307920527809",
+        ThumbnailSize = 60,
 })
-
-WhakizashiXTab:Paragraph({
+ChangeLogsSection:Paragraph({
     Title = [[
     Change Logs
 WhakizashiX 1.0.0.1
@@ -90,6 +100,9 @@ WhakizashiX 1.0.0.1
 })
 
 WhakizashiXTab:Select() -- Select Tab
+
+
+
 
 local Players = game:GetService("Players")
 local RunService = game:GetService("RunService")
