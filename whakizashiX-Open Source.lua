@@ -22,7 +22,7 @@ end
 local Window = WindUI:CreateWindow({
 Title = "Neo Hyper v1.0",
 Icon = "zap",
-Author = "scv8",
+Author = "By M4X",
 Folder = "WhakizashiX-Hub-X",
 NewElements = true,
 HideSearchBar = true,
@@ -70,35 +70,34 @@ Window:Tag({
 })
 
 
-local WhakizashiXTab = Tabs.Imp:Tab({ Title = "WhakizashiX", Icon = "github" })
-local DiscordTab = Tabs.Imp:Tab({ Title = "Discord", Icon = "link" })
+local WhakizashiXTab = Tabs.Imp:Tab({ Title = "Neo Hyper", Icon = "github" })
 local MainTab = Tabs.Main:Tab({ Title = "Player", Icon = "star" })
-local VisualsTab = Tabs.Main:Tab({ Title = "Esp", Icon = "lock", Locked = "True" })
-local AutoFarmTab = Tabs.Main:Tab({ Title = "AutoFarm", Icon = "lock", Locked = "True" })
+local VisualsTab = Tabs.Main:Tab({ Title = "Esp", Icon = "lock" })
+local AutoFarmTab = Tabs.Main:Tab({ Title = "AutoFarm", Icon = "lock", })
 local VisualTab = Tabs.Main:Tab({ Title = "Visual", Icon = "sparkles" })
-local GameTab = Tabs.Customise:Tab({ Title = "Game Settings", Icon = "lock", Locked = "True" })
-local WindowTab = Tabs.Customise:Tab({ Title = "WhakizashiX settings", Icon = "lock", Locked = "True" })
+local GameTab = Tabs.Customise:Tab({ Title = "Game Settings", Icon = "lock" })
+local WindowTab = Tabs.Customise:Tab({ Title = "WhakizashiX settings", Icon = "lock" })
 local Keybind = Tabs.Customise:Tab({ Title = "Keybind", Icon = "keyboard" })
 
 -- Seção About
 WhakizashiXTab:Paragraph({    
-        Title = "About WhakizashiX",    
-        Desc = "Made By : Svc8,  Special thanks: pakaucsk, ciumesblood, .muryl_ozl, _imxired, tjtinhaa, maxghosttt, Pnsdg" ,
+        Title = "About Neo Hyper",    
+        Desc = "Made By : M4X EVA,  Special thanks: Amal Jana " ,
         Thumbnail = "rbxassetid://125307920527809",
         ThumbnailSize = 60,
 })
-WhakizashiXTab:Paragraph({    
-        Title = [[
+ChangeLogsSection:Paragraph({
+    Title = [[
     Change Logs
 WhakizashiX 1.0.0.1
     (also known as Lottus / Whakizashi-Hub-X)  ]],
-        Desc = [[  1. Interface rework 
+    Desc = [[  1. Interface rework 
   2. New options like infinite slide
   3. Emote Changer Rework
  4. Save & Load Config 
  5. Optimization & bug fixes
 ]],
-       TitleSize = 80,
+    TitleSize = 80,
 })
 
 WhakizashiXTab:Select() -- Select Tab
