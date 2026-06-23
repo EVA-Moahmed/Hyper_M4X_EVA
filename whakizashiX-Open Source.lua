@@ -20,56 +20,52 @@ do
     end
 end
 
-
-
 local Window = WindUI:CreateWindow({
-Title = "Neo Hyper v1.0",
-Icon = "zap",
-Author = "By M4X",
-Folder = "WhakizashiX-Hub-X",
-NewElements = true,
-HideSearchBar = true,
-Theme = "Dark",
-Size = UDim2.fromOffset(1000, 460),
-
+    Title = "Neo Hyper v1.0",
+    Icon = "zap",
+    Author = "By M4X",
+    Folder = "WhakizashiX-Hub-X",
+    NewElements = true,
+    HideSearchBar = true,
+    Theme = "Dark",
+    Size = UDim2.fromOffset(1000, 460),
 })
+
 Window:EditOpenButton({
-Title = "Neo Hyper",
-Icon = "app-window",
-CornerRadius = UDim.new(0,16),
-StrokeThickness = 0,
-Color = ColorSequence.new(Color3.fromRGB(255,0,0), Color3.fromRGB(200,50,0)),
-Enabled = true,
-Draggable = true,
+    Title = "Neo Hyper",
+    Icon = "app-window",
+    CornerRadius = UDim.new(0,16),
+    StrokeThickness = 0,
+    Color = ColorSequence.new(Color3.fromRGB(255,0,0), Color3.fromRGB(200,50,0)),
+    Enabled = true,
+    Draggable = true,
 })
 
 local Tabs = {}
 
-
-Tabs.Imp = Window:Section({
+Tabs.Imp = Window:Tab({
     Title = "Faq",
     Icon = "circle-question-mark",
-    Opened = true,
+    Locked = false,
 })
 
-
-Tabs.Main = Window:Section({
+Tabs.Main = Window:Tab({
     Title = "Main",
     Icon = "flame",
-    Opened = true,
+    Locked = false,
 })
 
-Tabs.Customise = Window:Section({
+Tabs.Customise = Window:Tab({
     Title = "Misc",
     Icon = "bolt",
-    Opened = false,
-}) 
+    Locked = false,
+})
 
 Window:Tag({
     Title = "Beta",
     Icon = "bird",
     Color = Color3.fromHex("#B2B2B2"),
-    Radius = 13, -- from 0 to 13
+    Radius = 13,
 })
 
 local WhakizashiXTab = Tabs.Imp:Section({ Title = "Neo Hyper", Side = "Left" })
@@ -82,14 +78,14 @@ local WindowTab = Tabs.Customise:Section({ Title = "WhakizashiX settings", Side 
 local Keybind = Tabs.Customise:Section({ Title = "Keybind", Side = "Left" })
 
 -- Seção About
-
 WhakizashiXTab:Paragraph({    
-        Title = "About Neo Hyper",    
-        Desc = "Made By : M4X EVA,  Special thanks: Amal Jana " ,
-        Thumbnail = "rbxassetid://125307920527809",
-        ThumbnailSize = 60,
+    Title = "About Neo Hyper",    
+    Desc = "Made By : M4X EVA,  Special thanks: Amal Jana ",
+    Thumbnail = "rbxassetid://125307920527809",
+    ThumbnailSize = 60,
 })
-ChangeLogsSection:Paragraph({
+
+WhakizashiXTab:Paragraph({
     Title = [[
     Change Logs
 WhakizashiX 1.0.0.1
@@ -98,14 +94,12 @@ WhakizashiX 1.0.0.1
   2. New options like infinite slide
   3. Emote Changer Rework
  4. Save & Load Config 
- 5. Optimization & bug fixes
+  5. Optimization & bug fixes
 ]],
     TitleSize = 80,
 })
 
-WhakizashiXTab:Select() -- Select Tab
-
-
+WhakizashiXTab:Select()
 
 
 local Players = game:GetService("Players")
