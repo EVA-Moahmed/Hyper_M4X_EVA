@@ -37,6 +37,17 @@ Window:EditOpenButton({
     Draggable = true,
 })
 
+local files = {
+    {name = "Home",     url = "https://raw.githubusercontent.com/mixmix-mi/Neo/refs/heads/main/H.lua"},
+    {name = "Auto",     url = "https://raw.githubusercontent.com/mixmix-mi/Neo/refs/heads/main/A.lua"},
+    {name = "ESP",      url = "https://raw.githubusercontent.com/mixmix-mi/Neo/refs/heads/main/E.lua"},
+    {name = "Misc",     url = "https://raw.githubusercontent.com/mixmix-mi/Neo/refs/heads/main/M.lua"},
+    {name = "VIP",      url = "https://raw.githubusercontent.com/mixmix-mi/Neo/refs/heads/main/V.lua"},
+    {name = "Se",       url = "https://raw.githubusercontent.com/mixmix-mi/Neo/refs/heads/main/Sssss.lua"},
+    {name = "Info",     url = "https://raw.githubusercontent.com/mixmix-mi/Neo/refs/heads/main/I.lua"}
+}
+
+
 local Tabs = {}
 
 Tabs.Imp = Window:Tab({
