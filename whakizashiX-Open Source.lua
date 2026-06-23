@@ -24,7 +24,7 @@ local Window = WindUI:CreateWindow({
     NewElements = true,
     HideSearchBar = true,
     Theme = "Dark",
-    Size = UDim2.fromOffset(1000, 460),
+  --  Size = UDim2.fromOffset(1000, 460),
 })
 
 Window:EditOpenButton({
