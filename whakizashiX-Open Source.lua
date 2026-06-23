@@ -1,7 +1,3 @@
-
-
-
--- Look at this awful source code by WhakizashiX, entirely made by AI, lolll
 local Players = game:GetService("Players")
 local RunService = game:GetService("RunService")
 local Workspace = game:GetService("Workspace")
