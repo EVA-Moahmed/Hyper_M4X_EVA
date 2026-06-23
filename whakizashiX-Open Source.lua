@@ -79,6 +79,7 @@ local WindowTab = Tabs.Customise:Section({ Title = "WhakizashiX settings", Side 
 local Keybind = Tabs.Customise:Section({ Title = "Keybind", Side = "Left" })
 
 -- Seção About
+
 WhakizashiXTab:Paragraph({    
         Title = "About Neo Hyper",    
         Desc = "Made By : M4X EVA,  Special thanks: Amal Jana " ,
