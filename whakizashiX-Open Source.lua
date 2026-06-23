@@ -40,44 +40,32 @@ Enabled = true,
 Draggable = true,
 })
 
+-- تعريف التابات بشكل صحيح
 local Tabs = {}
 
-
-Tabs.Imp = Window:Section({
-    Title = "Faq",
-    Icon = "circle-question-mark",
-    Opened = true,
-})
-
-
-Tabs.Main = Window:Section({
-    Title = "Main",
-    Icon = "flame",
-    Opened = true,
-})
-
-Tabs.Customise = Window:Section({
-    Title = "Misc",
-    Icon = "bolt",
-    Opened = false,
-}) 
+-- تعريف التابات (Tabs مش Sections)
+Tabs.Imp = Window:Tab({ Title = "Faq", Icon = "circle-question-mark", Locked = false })
+Tabs.Main = Window:Tab({ Title = "Main", Icon = "flame", Locked = false })
+Tabs.Customise = Window:Tab({ Title = "Misc", Icon = "bolt", Locked = false })
 
 Window:Tag({
     Title = "Beta",
     Icon = "bird",
     Color = Color3.fromHex("#B2B2B2"),
-    Radius = 13, -- from 0 to 13
+    Radius = 13,
 })
 
+-- تعريف الأقسام (Sections) داخل التابات
+local WhakizashiXTab = Tabs.Imp:Section({ Title = "Neo Hyper", Side = "Left" })
+local MainTab = Tabs.Main:Section({ Title = "Player", Side = "Left" })
+local VisualsTab = Tabs.Main:Section({ Title = "Esp", Side = "Left" })
+local AutoFarmTab = Tabs.Main:Section({ Title = "AutoFarm", Side = "Left" })
+local VisualTab = Tabs.Main:Section({ Title = "Visual", Side = "Left" })
+local GameTab = Tabs.Customise:Section({ Title = "Game Settings", Side = "Left" })
+local WindowTab = Tabs.Customise:Section({ Title = "WhakizashiX settings", Side = "Left" })
+local Keybind = Tabs.Customise:Section({ Title = "Keybind", Side = "Left" })
 
-local WhakizashiXTab = Tabs.Imp:Tab({ Title = "Neo Hyper", Icon = "github" })
-local MainTab = Tabs.Main:Tab({ Title = "Player", Icon = "star" })
-local VisualsTab = Tabs.Main:Tab({ Title = "Esp", Icon = "lock" })
-local AutoFarmTab = Tabs.Main:Tab({ Title = "AutoFarm", Icon = "lock", })
-local VisualTab = Tabs.Main:Tab({ Title = "Visual", Icon = "sparkles" })
-local GameTab = Tabs.Customise:Tab({ Title = "Game Settings", Icon = "lock" })
-local WindowTab = Tabs.Customise:Tab({ Title = "WhakizashiX settings", Icon = "lock" })
-local Keybind = Tabs.Customise:Tab({ Title = "Keybind", Icon = "keyboard" })
+print("✅ Tabs and Sections defined correctly!")
 
 -- Seção About
 WhakizashiXTab:Paragraph({    
